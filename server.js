@@ -26,7 +26,7 @@ app.post('/api/ask-ai', async (req, res) => {
         console.log("กำลังถาม Gemini...");
         
         // ใช้ Model gemini-1.5-flash ซึ่งทำงานเร็วและเหมาะกับข้อความ
-        const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
         
         const result = await model.generateContent(prompt);
         const responseText = result.response.text();

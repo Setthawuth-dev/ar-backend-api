@@ -47,6 +47,10 @@ app.post('/api/ask-ai', async (req, res) => {
         const result = await model.generateContent(prompt);
         const responseText = result.response.text();
 
+        console.log("================ AI RESPONSE ================");
+        console.log(responseText); 
+        console.log("=============================================");
+
         console.log("Gemini ตอบกลับสำเร็จ!");
         res.json({ answer: responseText });
 

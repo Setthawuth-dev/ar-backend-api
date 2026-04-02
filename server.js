@@ -42,7 +42,7 @@ app.post('/api/ask-ai', async (req, res) => {
         console.log("กำลังถาม Gemini...");
         
         // 🚀 ลองเปลี่ยนมาใช้รุ่นล่าสุดดูครับ (ถ้ายัง Error เราจะเอาชื่อจากใน Log ข้างบนมาใส่แทน)
-        const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+        const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
         
         const result = await model.generateContent(prompt);
         const responseText = result.response.text();
